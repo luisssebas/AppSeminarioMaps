@@ -54,6 +54,7 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
 var onSuccess = function(position) {
     lat = position.coords.latitude;
     lon = position.coords.longitude;
+    setLocalization(position);
     console.log('pos',position);
     console.log('Latitude: '          + position.coords.latitude          + '\n' +
           'Longitude: '         + position.coords.longitude         + '\n' +
